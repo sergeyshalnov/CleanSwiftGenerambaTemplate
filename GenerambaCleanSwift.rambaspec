@@ -1,0 +1,36 @@
+# Template information section
+name: GenerambaCleanSwift
+summary: CleanSwift template
+author: Sergey Shalnov
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+# Configurator
+- {name: Configurator/IConfigurator.swift, custom_name: 'I{{ module_info.name }}Configurator.swift', path: Code/Configurator/IConfigurator.swift.liquid}
+- {name: Configurator/Configurator.swift, path: Code/Configurator/Configurator.swift.liquid}
+
+# View
+- {name: View/Protocols/ViewInput.swift, custom_name: 'I{{ module_info.name }}ViewInput.swift', path: Code/View/Protocols/ViewInput.swift.liquid}
+- {name: View/Protocols/ViewOutput.swift, custom_name: 'I{{ module_info.name }}ViewOutput.swift', path: Code/View/Protocols/ViewOutput.swift.liquid}
+- {name: View/View.swift, path: Code/View/View.swift.liquid}
+- {name: View/View.xib, path: Code/View/View.xib.liquid}
+
+# Interactor
+- {name: Interactor/Protocols/InteractorInput.swift, custom_name: 'I{{ module_info.name }}InteractorInput.swift', path: Code/Interactor/Protocols/InteractorInput.swift.liquid}
+- {name: Interactor/Protocols/InteractorOutput.swift, custom_name: 'I{{ module_info.name }}InteractorOutput.swift', path: Code/Interactor/Protocols/InteractorOutput.swift.liquid}
+- {name: Interactor/Interactor.swift, path: Code/Interactor/Interactor.swift.liquid}
+
+# Presenter
+- {name: Presenter/Protocols/PresenterInput.swift, custom_name: 'I{{ module_info.name }}PresenterInput.swift', path: Code/Presenter/Protocols/PresenterInput.swift.liquid}
+- {name: Presenter/Protocols/PresenterOutput.swift, custom_name: 'I{{ module_info.name }}PresenterOutput.swift', path: Code/Presenter/Protocols/PresenterOutput.swift.liquid}
+- {name: Presenter/Presenter.swift, path: Code/Presenter/Presenter.swift.liquid}
+
+# Router
+- {name: Router/IRouter.swift, custom_name: 'I{{ module_info.name }}Router.swift', path: Code/Router/IRouter.swift.liquid}
+- {name: Router/Router.swift, path: Code/Router/Router.swift.liquid}
+
+
+# Template dependencies
+dependencies:

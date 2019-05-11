@@ -1,0 +1,26 @@
+{% include 'header' %}
+
+import Foundation
+
+
+final class {{ module_info.name }}Router {
+  
+  // MARK: - Private variables 
+
+  private weak var view: {{ module_info.name }}View?
+  
+  
+  // MARK: - Initialization 
+
+  init(view: {{ module_info.name }}View) {
+    self.view = view
+  }
+  
+}
+
+
+// MARK: - I{{ module_info.name }}Router extension
+
+extension {{ module_info.name }}Router: I{{ module_info.name }}Router {
+
+}
