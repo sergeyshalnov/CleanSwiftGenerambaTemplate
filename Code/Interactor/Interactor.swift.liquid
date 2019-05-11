@@ -1,0 +1,26 @@
+{% include 'header' %}
+
+import Foundation
+
+
+final class {{ module_info.name }}Interactor {
+  
+  // MARK: - Private Variables
+  
+  private let output: I{{ module_info.name }}InteractorOutput
+  
+  
+  // MARK: - Initialization
+  
+  init(output: I{{ module_info.name }}InteractorOutput) {
+    self.output = output
+  }
+  
+}
+
+
+// MARK: - I{{ module_info.name }}InteractorInput extension
+
+extension {{ module_info.name }}Interactor: I{{ module_info.name }}InteractorInput {
+
+}

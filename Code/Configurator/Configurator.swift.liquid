@@ -1,0 +1,26 @@
+{% include 'header' %}
+
+import Foundation
+
+
+final class {{ module_info.name }}Configurator {
+
+  static let sharedInstance = {{ module_info.name }}Configurator()
+
+}
+
+
+// MARK: - I{{ module_info.name }}Configurator extension
+
+extension {{ module_info.name }}Configurator: I{{ module_info.name }}Configurator {
+
+  func configure(view: {{ module_info.name }}View) {
+    let router = {{ module_info.name }}Router(view: view)
+    let presenter = {{ module_info.name }}Presenter(output: view)
+    let interactor = {{ module_info.name }}Interactor(output: presenter)
+    
+    view.output = interactor
+    view.router = router
+  }
+
+}
